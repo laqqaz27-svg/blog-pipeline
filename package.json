@@ -1,0 +1,12 @@
+{
+  "name": "blog-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "test": "npm test --prefix backend",
+    "start": "npm start --prefix backend",
+    "lint": "npm run lint --prefix frontend"
+  }
+}
