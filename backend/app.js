@@ -25,8 +25,8 @@ const frontendDist = path.resolve(__dirname, '../frontend/dist')
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(frontendDist))
-
-  app.get('*', (req, res, next) => {
+  
+app.get('/{*splat}', (req, res, next) => {
     if (req.path.startsWith('/api/')) {
       return next()
     }
